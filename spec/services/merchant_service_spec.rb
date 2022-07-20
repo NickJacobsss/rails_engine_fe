@@ -18,6 +18,8 @@ RSpec.describe "Merchant Service API " do
   end
 
   it "returns 1 merchant " do
-  end 
+    parsed_json = MerchantService.find_merchant(1)
+    expect(parsed_json[:attributes][:name]).to eq("Schroeder-Jerde")
+  end
 
 end
